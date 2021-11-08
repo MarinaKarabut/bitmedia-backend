@@ -5,9 +5,8 @@ const getAllUsers = async (req, res) => {
   const { limit, page } = req.query
 
   const start = Number(limit) * Number(page) - Number(limit)
-  // console.log(start)
+
   const end = Number(start) + Number(limit)
-  console.log(end)
 
   const selectedUsers = usersData.slice(start, end)
 
